@@ -23,3 +23,5 @@ for sides in range (8,100,8):
 # Experiment with the loop above alongside the actual value of Pi. How many
 # sides does it take to make the two close?
 
+for sides in range (24, 560, 40):
+    print(sides, archimedes(sides))
