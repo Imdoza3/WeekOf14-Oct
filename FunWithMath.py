@@ -78,3 +78,69 @@ print(factorial(n))
 # 20
 # write a function to compute the Nth Fibonacci number, where N is a parameter
 # You may assume that N will be greater then or equal to 3
+
+
+# A Monte Carlo Simulation
+
+import random
+
+print(random.random())
+
+# Bolean expressions
+# > greater than
+# >= greater than or equal to
+# < less than
+# <= less than or equal to
+# == the same as [equal to ]
+# != NOT equal to
+
+dogWeight = 25
+print(dogWeight != 25)
+catWeight = 15
+
+# compound Boolean operators
+# and
+# or
+# not
+print(not catWeight < 20)
+
+
+# Decision Making -- Selection statements
+a = 5
+b = 10
+c = 75
+
+if a > b:
+    c = 45
+    if b> c:
+        a = 25
+    else: a = -25
+
+print(c)
+
+if a<= b:
+    a = 25
+
+else:
+    c = 1050
+    if b == a:
+        c = 25
+
+print(a, b, c)
+
+d = 55
+e = 72
+f = 44
+ans = 0
+
+if d > e:
+    ans = 12
+else:
+    if d == e:
+        ans = 50
+    else:
+        if f < d * e:
+            and = 100
+        else:
+            and = 75
+print(ans)
