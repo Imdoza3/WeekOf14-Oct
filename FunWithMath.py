@@ -105,42 +105,50 @@ catWeight = 15
 print(not catWeight < 20)
 
 
-# Decision Making -- Selection statements
-a = 5
-b = 10
-c = 75
 
-if a > b:
-    c = 45
-    if b> c:
-        a = 25
-    else: a = -25
+def montePi(numDarts):
 
-print(c)
+    inCircle = 0
 
-if a<= b:
-    a = 25
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
 
-else:
-    c = 1050
-    if b == a:
-        c = 25
+        distance = math.sqrt(x**2 + y**2)
 
-print(a, b, c)
+        if distance <= 1:
+            inCircle = inCircle + 1
 
-d = 55
-e = 72
-f = 44
-ans = 0
+    pi = inCircle / numDarts *4
+    return pi
 
-if d > e:
-    ans = 12
-else:
-    if d == e:
-        ans = 50
-    else:
-        if f < d * e:
-            and = 100
-        else:
-            and = 75
-print(ans)
+print(montePi(100))
+
+import turtle
+
+def showMontePi(numDarts):
+    scn = turtle.Screen()
+    t = turtle.Turtle()
+
+    scn.setworldcoordinates(-2,-2,2,2)
+
+    t.penup()
+    t.goto(-1,0)
+    t.pd()
+    t.goto(1,0)
+
+    t.pu()
+    t.goto(0,1)
+    t.pd()
+    t.goto(0,-1)
+
+    inCircle = 0
+    t.pu()
+
+    for i in range(numDarts):
+        x = random.random()
+        y = random.random()
+
+        distance = math.sqrt(x**2 + y**2)
+
+        t.goto(x,y)
